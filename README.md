@@ -1,1 +1,1 @@
-# lab-06-todo-list
+# This is a to-do list by Tyler Corbett
