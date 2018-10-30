@@ -1,6 +1,6 @@
 import todoApi from './todo-api.js';
 import todoList from './todo-list.js';
-import addTodo from './add-todo';
+import addTodo from './add-todo.js';
 
 const todos = todoApi.getAll();
 

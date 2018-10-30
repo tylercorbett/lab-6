@@ -3,8 +3,11 @@
 function makeTodo(todo) {
     const html = /*html*/`
         <li class="todo">
-            <h3 class="name" style="background: ${todo.color};">
-                ${todo.name}
+            <h3 class="task" style="background: ${todo.color};">
+                ${todo.task}
+            </h3>
+            <h3 style="background: ${todo.color};">
+                ${todo.date}
             </h3>
             <button class="danger">X</button>
         </li>

@@ -1,7 +1,19 @@
-let listItems = [];
+let listItems = [
+   
+];
+
+function customParser(key, value) {
+    if(key !== 'due') return value;
+    return new Date(value);
+}
 
 function saveTextInput() {
-    localStorage.setItem('to-dos', JSON.stringify(listItems));
+    localStorage.setItem('listItems', JSON.stringify(listItems));
+}
+
+const saved = localStorage.getItem('listItems');
+if(saved) {
+    listItems = JSON.parse(saved, customParser);
 }
 
 const todoApi = {
@@ -10,6 +22,7 @@ const todoApi = {
         if(json) {
             listItems = JSON.parse(json);
         }
+        return listItems;
     },
     add(textInput) {
         listItems.push(textInput);
@@ -23,5 +36,5 @@ const todoApi = {
         }
     }
 };
-
+saveTextInput();
 export default todoApi;

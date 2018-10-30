@@ -5,12 +5,12 @@ const addTodo = {
             event.preventDefault();
             const elements = form.elements;
             const todo = {
-                name: elements.name.value,
-                date: elements.date.value
+                task: elements.task.value,
+                date: elements.date.value,
             };
             onAdd(todo);
             form.reset();
-            document.getElementById.blur();
+            document.activeElement.blur();
         });
     }
 };

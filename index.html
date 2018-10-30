@@ -13,19 +13,22 @@
     <main>
         <section id="text-input">
             <form id="add-form">
-                <label for="text-box">Enter item here: </label>
-                <input type="text" name="text-box">
+                <label>
+                    Task:
+                    <input required name="task">
+                </label>
+                <label>
+                    Date:
+                    <input type="date" required name="date">
+                </label>
+                <button type="action">Add</button>
             </form>
-            <button type="submit">Submit</button>
         </section>
         <section>
-            <ol id="list">  
-            </ol>
+            <ul id="list">  
+            </ul>
         </section>
     </main>
-<script src="add-todo.js"></script>
-<script src="app.js"></script>
-<script src="todo-api.js"></script>
-<script src="todo-list.js"></script>
+<script type="module" src="JavaScript/app.js"></script>
 </body>
 </html>
